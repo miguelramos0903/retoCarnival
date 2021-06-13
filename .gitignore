@@ -1,7 +1,7 @@
 # Created by https://www.gitignore.io/api/java,bluej,sonar,macos,maven,gradle,android,windows,eclipse,netbeans,intellij,sonarqube
 # Edit at https://www.gitignore.io/?templates=java,bluej,sonar,macos,maven,gradle,android,windows,eclipse,netbeans,intellij,sonarqube
 #Custom
-target/
+#target/
 null/
 ### Android ###
 # Built application files
@@ -92,7 +92,7 @@ tmp/
 # PDT-specific (PHP Development Tools)
 .buildpath
 # sbteclipse plugin
-.target
+#.target
 # Tern plugin
 .tern-project
 # TeXlipse plugin
@@ -215,7 +215,7 @@ Network Trash Folder
 Temporary Items
 .apdisk
 ### Maven ###
-target/
+#target/
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
