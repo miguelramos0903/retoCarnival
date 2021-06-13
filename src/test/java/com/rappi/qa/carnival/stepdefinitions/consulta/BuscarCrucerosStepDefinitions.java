@@ -1,5 +1,6 @@
 package com.rappi.qa.carnival.stepdefinitions.consulta;
 
+import com.rappi.qa.carnival.tasks.comunes.CerrarVentanaModal;
 import com.rappi.qa.carnival.tasks.consultas.BuscarCruceros;
 import com.rappi.qa.carnival.tasks.consultas.GuardarBusqueda;
 import cucumber.api.java.Before;
@@ -36,6 +37,7 @@ public class BuscarCrucerosStepDefinitions {
 
     @Cuando("^intento buscar cruceros a bahamas$")
     public void intentoBuscarCrucerosABahamas(List<String> data) {
+        miguel.attemptsTo(CerrarVentanaModal.enLaWeb());
         miguel.attemptsTo(BuscarCruceros.enLaWeb(data));
         miguel.attemptsTo(GuardarBusqueda.realizadaEnLaWeb());
     }

@@ -5,6 +5,9 @@ import org.openqa.selenium.By;
 
 public class RegistroUsuarioPage {
 
+    private RegistroUsuarioPage() {
+    }
+
     public static final Target CERRAR_MENSAJE_VENTANA_MODAL = Target
             .the("Mensaje pop up")
             .located(By.xpath("//*[@id='MainBody']/div[2]/div/span"));
@@ -18,7 +21,7 @@ public class RegistroUsuarioPage {
             .located(By.id("username"));
 
     public static final Target CAMPO_PASSWORD = Target
-            .the("campo password")
+            .the("campo de password")
             .located(By.id("password"));
 
     public static final Target BOTON_REGISTRAR = Target
@@ -65,15 +68,10 @@ public class RegistroUsuarioPage {
             .the("campo genero")
             .locatedBy("//*[@id='gender-pm']//*[contains(text(),'{0}')]");
 
-    public static final Target TERMINOS_CONDICIONES = Target
-            .the("terminos y condiciones")
-            .located(By.cssSelector(".ff-container:nth-child(10) > .ff-label"));
-
     public static final Target TERMINOS_CONDICIONES_D = Target
             .the("terminos y condiciones")
             .located(By.xpath("//div[10]/label"));
 
-//.ff-container:nth-child(10) > .ff-label
     public static final Target BOTON_ENVIAR = Target
             .the("boton enviar")
             .located(By.id("submit-guest-pm"));
@@ -89,4 +87,22 @@ public class RegistroUsuarioPage {
     public static final Target TRABAJANDO_CON_TRABEL = Target
             .the("Campo telefono")
             .locatedBy("//*[@id='workingWithTravelAgent-pm']//following::label[{0}]");
+
+    public static final Target MENSAJE_EXITOSO = Target
+            .the("mensaje exitoso del registro")
+            .located(By.xpath("//*[@id='lrh-heading']/font/font"));
+
+    public static final Target COD_VIP = Target
+            .the(" codigo VIP")
+            .located(By.cssSelector(".pm-profile-card__vifp"));
+
+    public static final Target CONSULTA_PERFIL = Target
+            .the("consulta perfil")
+            .located(By.xpath("//ul[@class='cgh-header__main-menu-options cgh-header__main-menu-options--right']//div/p/a"));
+
+    public static final Target VOLVER_HOME = Target
+            .the(" codigo VIP")
+            .located(By.cssSelector(".cgh-header__logo"));
+
+
 }

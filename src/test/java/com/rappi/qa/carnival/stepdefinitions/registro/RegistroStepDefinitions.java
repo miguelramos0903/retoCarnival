@@ -1,5 +1,6 @@
 package com.rappi.qa.carnival.stepdefinitions.registro;
 
+import com.rappi.qa.carnival.tasks.comunes.CerrarVentanaModal;
 import com.rappi.qa.carnival.tasks.registro.RegistrarUsuario;
 import cucumber.api.java.Before;
 import cucumber.api.java.es.Cuando;
@@ -12,6 +13,8 @@ import net.serenitybdd.screenplay.actions.Open;
 import net.thucydides.core.annotations.Managed;
 import org.hamcrest.Matchers;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 
 import java.util.List;
 
@@ -35,6 +38,7 @@ public class RegistroStepDefinitions {
 
     @Cuando("^intento registrar un nuevo usuario$")
     public void intentoRegistrarUnNuevoUsuario(List<String> data) {
+        miguel.attemptsTo(CerrarVentanaModal.enLaWeb());
         miguel.attemptsTo(RegistrarUsuario.enLaWeb(data));
     }
 

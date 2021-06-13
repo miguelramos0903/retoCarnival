@@ -4,7 +4,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Text;
 
-import static com.rappi.qa.carnival.userinterface.registro.RegistroUsuarioPage.BOTON_ENVIAR;
+import static com.rappi.qa.carnival.userinterface.registro.RegistroUsuarioPage.MENSAJE_EXITOSO;
 
 public class VerificarRegistroQuestions implements Question<String> {
 
@@ -14,9 +14,8 @@ public class VerificarRegistroQuestions implements Question<String> {
 
     @Override
     public String answeredBy(Actor actor) {
-        String resultadoObtenido = null;
-        resultadoObtenido = Text.of(BOTON_ENVIAR).viewedBy(actor).asString();
-        System.out.println(resultadoObtenido);
+        String resultadoObtenido;
+        resultadoObtenido = Text.of(MENSAJE_EXITOSO).viewedBy(actor).asString();
         return resultadoObtenido;
     }
 }
