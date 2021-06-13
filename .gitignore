@@ -92,7 +92,7 @@ tmp/
 # PDT-specific (PHP Development Tools)
 .buildpath
 # sbteclipse plugin
-.target
+#.target
 # Tern plugin
 .tern-project
 # TeXlipse plugin
@@ -215,7 +215,7 @@ Network Trash Folder
 Temporary Items
 .apdisk
 ### Maven ###
-target/
+#target/
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
