@@ -1,5 +1,7 @@
 # Automatización de Pruebas para el reto Carnival
-
+##Videos:
+Se guardaron el la suta del proyecto:
++ src/test/resources/videos
 ### Descripción y contexto
 
 ### El framework
@@ -75,14 +77,18 @@ El front es proporcionado por TODO1, y el Backend es desarrollado por el Banco.
 Para correr el proyecto se necesita Java JDK 1.8 y Gradle preferiblemente con la versión 6.7.
 
 ##Comando para ejecutar desde consola:
-###Comando desde Gradle:
-
-####Ejecuto un Registro:
+![Ejecutar desde la terminal](src/test/resources/imagenes/ejecutar_desde_la_terminal.JPG)
+###Comandos desde Gradle:
+####Ejecuto el Runner Registro Usuario:
 + gradle clean test --tests com.rappi.qa.carnival.runners.registro.RunnerRegistro aggregate -i
-
-####Ejecuto Consulta Buscar Crucero:
+####Ejecuto el Runner Consulta Buscar Crucero:
 + gradle clean test --tests com.rappi.qa.carnival.runners.consulta.RunnerBuscarCrucero aggregate -i
-
-####Ejecuto Actualizar un crucero:
+####Ejecuto el Runner Actualizar un crucero:
 + gradle clean test --tests com.rappi.qa.carnival.runners.actualizar.RunnerActualizarBusqueda aggregate -i
 
+##Ejecutar desde la Clase Runner
+![Ejecutar desde la terminal](src/test/resources/imagenes/runner_registro_usuario.JPG)
+####Los runners se encuentra en la siguientes rutas del proyecto:
++ src/test/java/com/rappi/qa/carnival/runners/registro/RunnerRegistro.java
++ src/test/java/com/rappi/qa/carnival/runners/consulta/RunnerBuscarCrucero.java
++ src/test/java/com/rappi/qa/carnival/runners/actualizar/RunnerActualizarBusqueda.java

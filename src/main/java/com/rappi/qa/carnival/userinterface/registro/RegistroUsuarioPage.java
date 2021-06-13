@@ -90,7 +90,7 @@ public class RegistroUsuarioPage {
 
     public static final Target MENSAJE_EXITOSO = Target
             .the("mensaje exitoso del registro")
-            .located(By.xpath("//*[@id='lrh-heading']/font/font"));
+            .located(By.xpath("//*[@id='lrh-heading']"));
 
     public static final Target COD_VIP = Target
             .the(" codigo VIP")

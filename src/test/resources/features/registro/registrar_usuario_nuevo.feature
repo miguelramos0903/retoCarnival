@@ -8,5 +8,5 @@ Característica: Realizar el registro de un nuevo usuario en la pagina de carniv
       | <idCaso> | <emailUsuario> | <password> | <primerNombre> | <primerApellido> | <dia> | <ano> | <mes> | <pais> | <genero> | <area> | <telefono> | <resultadoEsperado> |
     Entonces Verifico el <resultadoEsperado> del registro de usuario
     Ejemplos:
-      | idCaso | emailUsuario       | password    | primerNombre | primerApellido | dia | ano  | mes      | pais     | genero | area   | telefono  | resultadoEsperado         |
-      | 1      | prueba2@correo.com | Cl@ve123456 | PrimerNombre | PrimerApellido | 12  | 1980 | February | Colombia | Male   | 150415 | 999999999 | ¡GRACIAS POR REGISTRARTE! |
+      | idCaso | emailUsuario       | password    | primerNombre | primerApellido | dia | ano  | mes      | pais     | genero | area   | telefono  | resultadoEsperado      |
+      | 1      | prueba7@correo.com | Cl@ve123456 | PrimerNombre | PrimerApellido | 12  | 1980 | February | Colombia | Male   | 150415 | 999999999 | THANKS FOR SIGNING UP! |

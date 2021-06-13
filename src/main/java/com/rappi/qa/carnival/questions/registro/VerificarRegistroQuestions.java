@@ -15,7 +15,7 @@ public class VerificarRegistroQuestions implements Question<String> {
     @Override
     public String answeredBy(Actor actor) {
         String resultadoObtenido;
-        resultadoObtenido = Text.of(MENSAJE_EXITOSO).viewedBy(actor).asString();
+        resultadoObtenido = Text.of(MENSAJE_EXITOSO).viewedBy(actor).asString().trim();
         return resultadoObtenido;
     }
 }

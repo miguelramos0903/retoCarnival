@@ -4,13 +4,16 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
+import net.serenitybdd.screenplay.actions.JavaScriptClick;
 import net.serenitybdd.screenplay.actions.Scroll;
+import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.openqa.selenium.interactions.Actions;
 
 import java.util.List;
 
 import static com.rappi.qa.carnival.userinterface.registro.RegistroUsuarioPage.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 import static net.thucydides.core.webdriver.ThucydidesWebDriverSupport.getDriver;
 
 public class RegistrarUsuario implements Task {
@@ -60,12 +63,15 @@ public class RegistrarUsuario implements Task {
                 Click.on(TRABAJANDO_CON_TRABEL.of("1")),
                 Click.on(TRABAJANDO_CON_TRABEL.of("2")),
                 Click.on(TRABAJANDO_CON_TRABEL.of("2")),
+                JavaScriptClick.on(TERMINOS_CONDICIONES_D),
                 Scroll.to(BOTON_ENVIAR)
         );
-
-        action.moveByOffset(823, 537).click().perform();
-
-        actor.attemptsTo(Click.on(BOTON_ENVIAR));
+        actor.attemptsTo(
+                Click.on(BOTON_ENVIAR),
+                WaitUntil.the(MENSAJE_EXITOSO, isVisible())
+                        .forNoMoreThan(5).seconds(),
+                Scroll.to(MENSAJE_EXITOSO)
+        );
     }
 
 }
