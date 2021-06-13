@@ -1,7 +1,7 @@
 # Created by https://www.gitignore.io/api/java,bluej,sonar,macos,maven,gradle,android,windows,eclipse,netbeans,intellij,sonarqube
 # Edit at https://www.gitignore.io/?templates=java,bluej,sonar,macos,maven,gradle,android,windows,eclipse,netbeans,intellij,sonarqube
 #Custom
-target/
+#target/
 null/
 ### Android ###
 # Built application files
