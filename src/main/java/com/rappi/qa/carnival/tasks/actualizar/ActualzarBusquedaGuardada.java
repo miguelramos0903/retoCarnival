@@ -97,7 +97,8 @@ public class ActualzarBusquedaGuardada implements Task {
                 Scroll.to(CONTINUE_INFORMATION),
                 Click.on(CONTINUE_INFORMATION)
         );
-        actor.attemptsTo(Scroll.to(CONFIRMACION_INFORMATION));
+        actor.attemptsTo(Scroll.to(CONFIRMACION_INFORMATION),
+                WaitUntil.the(CONFIRMACION_INFORMATION, isVisible()).forNoMoreThan(5).seconds());
         Serenity.setSessionVariable("confirmacion").to(Text.of(CONFIRMACION_INFORMATION).viewedBy(actor).asString().trim());
     }
 }
